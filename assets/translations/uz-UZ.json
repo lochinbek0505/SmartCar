@@ -1,0 +1,24 @@
+{
+  "str_tesla": "Cobalt",
+  "str_km187": "187 km",
+  "str_control": "Boshqaruv",
+  "str_climate": "Iqlim",
+  "str_location": "Joylashuv",
+  "str_schedule": "Jadval",
+  "str_interior20": "Salon 20° C",
+  "str_rue81StChales": "Registon ko‘chasi 15-uy",
+  "str_c30": "30° C",
+  "str_ac": "Konditsioner",
+  "str_fan": "Ventilyator",
+  "str_heat": "Isitish",
+  "str_auto": "Avto",
+  "str_on": "Yoqilgan",
+  "str_vent": "Havoni aylantirish",
+  "str_c20": "20°",
+
+  "str_charging": "Quvvat olayapti",
+  "str_setChargeLimit": "Zaryad chegarasini belgilash",
+  "str_nearbySuperchargers": "Yaqin quvvatlash stansiyalari",
+  "str_teslaSuperchargerMontreal": "UzAuto Supercharger – Samarqand, Registon",
+  "str_available2_4": "2 / 4 mavjud"
+}

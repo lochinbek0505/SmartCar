@@ -1,0 +1,24 @@
+{
+  "str_tesla": "Кобальт",
+  "str_km187": "187 км",
+  "str_control": "Управление",
+  "str_climate": "Климат",
+  "str_location": "Местоположение",
+  "str_schedule": "Расписание",
+  "str_interior20": "Салон 20° C",
+  "str_rue81StChales": "Улица Регистан, дом 15",
+  "str_c30": "30° C",
+  "str_ac": "Кондиционер",
+  "str_fan": "Вентилятор",
+  "str_heat": "Отопление",
+  "str_auto": "Авто",
+  "str_on": "Вкл",
+  "str_vent": "Вентиляция",
+  "str_c20": "20°",
+
+  "str_charging": "Зарядка",
+  "str_setChargeLimit": "Установить лимит зарядки",
+  "str_nearbySuperchargers": "Ближайшие зарядные станции",
+  "str_teslaSuperchargerMontreal": "UzAuto Supercharger – Самарканд, Регистан",
+  "str_available2_4": "Доступно: 2 из 4"
+}
