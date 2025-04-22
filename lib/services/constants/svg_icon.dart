@@ -25,7 +25,7 @@ sealed class SvgIcon {
   static SvgPicture location_2 =
   SvgPicture.asset("assets/icons/svg_location_2.svg");
   static SvgPicture location_charge =
-  SvgPicture.asset("assets/icons/svg_location_charge.svg");
+  SvgPicture.asset("assets/icons/location_oil.png");
   static SvgPicture lock = SvgPicture.asset("assets/icons/svg_lock.svg");
   static SvgPicture lock_green =
   SvgPicture.asset("assets/icons/svg_lock_green.svg");

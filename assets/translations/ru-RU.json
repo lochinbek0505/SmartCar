@@ -15,10 +15,9 @@
   "str_on": "Вкл",
   "str_vent": "Вентиляция",
   "str_c20": "20°",
-
-  "str_charging": "Зарядка",
-  "str_setChargeLimit": "Установить лимит зарядки",
-  "str_nearbySuperchargers": "Ближайшие зарядные станции",
-  "str_teslaSuperchargerMontreal": "UzAuto Supercharger – Самарканд, Регистан",
-  "str_available2_4": "Доступно: 2 из 4"
+  "str_charging": "Заправка",
+  "str_setChargeLimit": "Установить лимит топлива",
+  "str_nearbySuperchargers": "Ближайшие автозаправочные станции",
+  "str_teslaSuperchargerMontreal": "UzAuto АЗС – Самарканд, Регистан",
+  "str_available2_4": "Доступно: 2 из 4 колонок"
 }

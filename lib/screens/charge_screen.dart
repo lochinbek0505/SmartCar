@@ -276,7 +276,7 @@ class _ChargerScreenState extends State<ChargerScreen> {
 
                 /// Text: Set Charge Limit
                 Text(
-                  "Set Charge Limit".tr(),
+                  "Установить лимит заправки".tr(),
                   style: AppTextStyles.sfProDisplay13.copyWith(
                     color: Colors.grey,
                   ),
@@ -318,9 +318,9 @@ class _ChargerScreenState extends State<ChargerScreen> {
                               const Padding(
                                 padding: EdgeInsets.only(top: 27),
                                 child: Text(
-                                  'Nearby Superchargers',
+                                  'Ближайшие автозаправки',
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 14,
                                     fontWeight: FontWeight.w600,
                                     color: Color(0xffFFFFFF),
                                   ),
@@ -331,12 +331,12 @@ class _ChargerScreenState extends State<ChargerScreen> {
                                     height > 200
                                         ? const Icon(
                                           Icons.keyboard_arrow_up,
-                                          size: 30,
+                                          size: 25,
                                           color: AppColors.textGrey,
                                         )
                                         : const Icon(
                                           Icons.keyboard_arrow_down,
-                                          size: 30,
+                                          size: 25,
                                           color: AppColors.textGrey,
                                         ),
                                 onPressed: func,
@@ -651,17 +651,17 @@ class Message extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Tesla Supercharger-',
+                    'UzAuto АЗС -', // AЗС - Avtozapravka stansiyasi
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFFEBEBF5).withOpacity(0.60),
                     ),
                   ),
                   Text(
-                    'Montreal, QC',
+                    'Самарканд, Регистан',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFFEBEBF5).withOpacity(0.60),
                     ),
@@ -678,7 +678,7 @@ class Message extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: ' 4 available',
+                          text: ' 4 колонки свободны', // kolonkalar benzin quygich nasoslar
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
@@ -692,11 +692,77 @@ class Message extends StatelessWidget {
               ),
               Column(
                 children: [
-                  SvgIcon.location_charge,
+                  Image.asset("assets/icons/location_oil.png",width: 30,height: 30,), // Agar kerak bo‘lsa ikonani ham almashtirish mumkin
                   const Text(
-                    '1.7 Km',
+                    '1.7 км',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.grey,
+                      height: 2,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+
+        Padding(
+          padding: const EdgeInsets.only(top: 25, right: 5),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'UzAuto АЗС -', // AЗС - Avtozapravka stansiyasi
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFFEBEBF5).withOpacity(0.60),
+                    ),
+                  ),
+                  Text(
+                    'Самарканд, Регистан',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFFEBEBF5).withOpacity(0.60),
+                    ),
+                  ),
+                  RichText(
+                    text: const TextSpan(
+                      children: [
+                        TextSpan(
+                          text: '2 /',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        TextSpan(
+                          text: ' 4 колонки свободны', // kolonkalar benzin quygich nasoslar
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Image.asset("assets/icons/location_oil.png",width: 30,height: 30,), // Agar kerak bo‘lsa ikonani ham almashtirish mumkin
+                  const Text(
+                    '1.7 км',
+                    style: TextStyle(
+                      fontSize: 16,
                       fontWeight: FontWeight.w400,
                       color: Colors.grey,
                       height: 2,
@@ -716,17 +782,17 @@ class Message extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Tesla Supercharger-',
+                    'UzAuto АЗС -', // AЗС - Avtozapravka stansiyasi
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFFEBEBF5).withOpacity(0.60),
                     ),
                   ),
                   Text(
-                    'Montreal, QC',
+                    'Самарканд, Регистан',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFFEBEBF5).withOpacity(0.60),
                     ),
@@ -743,7 +809,7 @@ class Message extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: ' 4 available',
+                          text: ' 4 колонки свободны', // kolonkalar benzin quygich nasoslar
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
@@ -757,11 +823,11 @@ class Message extends StatelessWidget {
               ),
               Column(
                 children: [
-                  SvgIcon.location_charge,
+                  Image.asset("assets/icons/location_oil.png",width: 30,height: 30,), // Agar kerak bo‘lsa ikonani ham almashtirish mumkin
                   const Text(
-                    '1.7 Km',
+                    '1.7 км',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w400,
                       color: Colors.grey,
                       height: 2,
@@ -781,17 +847,17 @@ class Message extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Tesla Supercharger-',
+                    'UzAuto АЗС -', // AЗС - Avtozapravka stansiyasi
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFFEBEBF5).withOpacity(0.60),
                     ),
                   ),
                   Text(
-                    'Montreal, QC',
+                    'Самарканд, Регистан',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w600,
                       color: const Color(0xFFEBEBF5).withOpacity(0.60),
                     ),
@@ -808,7 +874,7 @@ class Message extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: ' 4 available',
+                          text: ' 4 колонки свободны', // kolonkalar benzin quygich nasoslar
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
@@ -822,11 +888,11 @@ class Message extends StatelessWidget {
               ),
               Column(
                 children: [
-                  SvgIcon.location_charge,
+                  Image.asset("assets/icons/location_oil.png",width: 30,height: 30,), // Agar kerak bo‘lsa ikonani ham almashtirish mumkin
                   const Text(
-                    '1.7 Km',
+                    '1.7 км',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w400,
                       color: Colors.grey,
                       height: 2,
@@ -837,71 +903,7 @@ class Message extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 25, right: 5),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Tesla Supercharger-',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: const Color(0xFFEBEBF5).withOpacity(0.60),
-                    ),
-                  ),
-                  Text(
-                    'Montreal, QC',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: const Color(0xFFEBEBF5).withOpacity(0.60),
-                    ),
-                  ),
-                  RichText(
-                    text: const TextSpan(
-                      children: [
-                        TextSpan(
-                          text: '2 /',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        TextSpan(
-                          text: ' 4 available',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  SvgIcon.location_charge,
-                  const Text(
-                    '1.7 Km',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.grey,
-                      height: 2,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
+
       ],
     );
   }

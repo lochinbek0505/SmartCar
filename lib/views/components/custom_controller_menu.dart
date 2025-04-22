@@ -69,7 +69,7 @@ class _CustomControlPanelState extends State<CustomControlPanel> {
             },
           ),
           CupertinoButton(
-            child: SvgIcon.charge.copyWith(newColor: Colors.white),
+            child: SvgIcon.charge.copyWith(newColor: Colors.grey,newWidth: 25,newHeight: 25),
             onPressed: () {
               setState(() {
                 AppRoutes.pushChargeScreen(context);
