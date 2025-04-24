@@ -5,6 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
+import 'package:smart_car/screens/car_about.dart';
+import 'package:smart_car/screens/control_screen.dart';
 import 'package:smart_car/services/constants/svg_icon.dart';
 import 'package:smart_car/services/themes/colors.dart';
 import 'package:smart_car/views/components/custom_button_app_bar.dart';
@@ -111,51 +113,71 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   child: Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 40.0, left: 25),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                SvgIcon.car_2,
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Texts.strControl.tr(),
-                                ),
-                              ],
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (builder) => CobaltInfoPage(),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: SvgIcon.chevron_right,
-                            ),
-                          ],
+                          );
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 40.0, left: 25),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  SvgIcon.car_2,
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Texts.strControl.tr(),
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: SvgIcon.chevron_right,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 40.0, left: 25),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                SvgIcon.vent,
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    children: [
-                                      Texts.strClimate.tr(),
-                                      Texts.strInterior20.tr(),
-                                    ],
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (builder) => ControlScreen(),
+                            ),
+                          );
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 40.0, left: 25),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  SvgIcon.vent,
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                      children: [
+                                        Texts.strClimate.tr(),
+                                        Texts.strInterior20.tr(),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: SvgIcon.chevron_right,
-                            ),
-                          ],
+                                ],
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: SvgIcon.chevron_right,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       Padding(
