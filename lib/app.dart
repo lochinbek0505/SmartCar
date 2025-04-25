@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:smart_car/screens/OilPage.dart';
+import 'package:smart_car/screens/intro_page.dart';
 import 'package:smart_car/services/app_routes.dart';
 
 class App extends StatelessWidget {
@@ -15,7 +15,7 @@ class App extends StatelessWidget {
       locale: context.locale,
       theme: ThemeData(useMaterial3: true),
       routes: AppRoutes.routes,
-      home: Oilpage(),
+      home: IntroScreen(),
     );
   }
 }

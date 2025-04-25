@@ -15,7 +15,7 @@ class NotificationService {
     await _notificationsPlugin.initialize(initSettings);
   }
 
-  static Future<void> showSimpleNotification(String text) async {
+  static Future<void> showSimpleNotification(String title, String text) async {
     const AndroidNotificationDetails androidDetails =
         AndroidNotificationDetails(
           'simple_channel_id',
@@ -32,7 +32,7 @@ class NotificationService {
 
     await _notificationsPlugin.show(
       0, // notification ID
-      'Eslatma', // title
+      title, // title
       text, // body (sizga berilgan matn)
       platformDetails,
     );

@@ -1,7 +1,26 @@
 import 'package:flutter/material.dart';
 
-class GaragePage extends StatelessWidget {
+import '../views/components/fuild_dailog.dart';
+
+class GaragePage extends StatefulWidget {
   const GaragePage({super.key});
+
+  @override
+  State<GaragePage> createState() => _GaragePageState();
+}
+
+class _GaragePageState extends State<GaragePage> {
+  void _showFuelDialog(BuildContext context, String state) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Введите количество топлива'),
+          content: FuelInputDialog(state),
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,10 +73,20 @@ class GaragePage extends StatelessWidget {
               'Тонировка',
               'Информация о тонировке не найдена',
             ),
-            _buildAddCard(
-              Icons.add,
-              'Масло',
-              'Добавьте информацию, чтобы перед истечением срока получать напоминания',
+            GestureDetector(
+              onTap: () {
+                _showFuelDialog(context, 'fuel');
+              },
+              child: GestureDetector(
+                onTap: () {
+                  _showFuelDialog(context, 'oil');
+                },
+                child: _buildAddCard(
+                  Icons.add,
+                  'Масло',
+                  'Добавьте информацию, чтобы перед истечением срока получать напоминания',
+                ),
+              ),
             ),
             _buildAddCard(
               Icons.add,
