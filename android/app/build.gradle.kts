@@ -11,8 +11,11 @@ android {
     ndkVersion = "26.3.11579264"
 
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
+
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+
     }
 
     kotlinOptions {
@@ -37,6 +40,12 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+}
+dependencies {
+    // ... boshqa dependencylar
+
+    // 🔁 Desugaring uchun kerakli kutubxona
+    coreLibraryDesugaring ("com.android.tools:desugar_jdk_libs:2.1.5")
 }
 
 flutter {
