@@ -1,156 +1,96 @@
 import 'package:flutter/material.dart';
+import 'package:smart_car/services/themes/colors.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Stack(
+      backgroundColor: AppColors.backgroundDark,
+      appBar: AppBar(
+        backgroundColor: AppColors.backgroundDark,
+        title: Text('Профиль', style: TextStyle(color: Colors.white)),
+        centerTitle: true,
+        elevation: 0,
+      ),
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        padding: EdgeInsets.all(16),
         children: [
-          // Background Gradient
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Colors.black, Color(0xFF0f0f1a)],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 30,
+                backgroundColor: Colors.white24,
+                child: Icon(Icons.person, size: 30, color: Colors.white),
               ),
-            ),
-          ),
-
-          // Main Content
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Top title
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Добро пожаловать, Азамат",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Icon(Icons.settings, color: Colors.white),
-                    ],
-                  ),
-                  const SizedBox(height: 30),
-
-                  // Car preview (just a box here, replace with your image or 3D)
-                  Center(
-                    child: Container(
-                      height: 160,
-                      width: 320,
+              SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.white12,
-                        image: DecorationImage(
-                          image: AssetImage(
-                            "assets/cobalt_preview.png",
-                          ), // own car image
-                          fit: BoxFit.contain,
-                        ),
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Text(
+                        'НЕ ИДЕНТИФИЦИРОВАН',
+                        style: TextStyle(color: Colors.white, fontSize: 12),
                       ),
                     ),
-                  ),
-
-                  const SizedBox(height: 24),
-
-                  // Car status
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      _carStatus("Бензин", "75%", Icons.local_gas_station),
-                      _carStatus("Темп.", "82°C", Icons.thermostat),
-                      _carStatus("Блокировка", "Открыта", Icons.lock_open),
-                    ],
-                  ),
-
-                  const SizedBox(height: 30),
-
-                  Text(
-                    "Центр управления",
-                    style: TextStyle(
-                      color: Colors.grey[400],
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
+                    SizedBox(height: 4),
+                    Text(
+                      '+998885788448',
+                      style: TextStyle(color: Colors.white),
                     ),
-                  ),
-                  const SizedBox(height: 12),
-
-                  // Control buttons
-                  Wrap(
-                    spacing: 16,
-                    runSpacing: 16,
-                    children: [
-                      _controlButton(Icons.power, "Запуск"),
-                      _controlButton(Icons.lock, "Закрыть"),
-                      _controlButton(Icons.lock_open, "Открыть"),
-                      _controlButton(Icons.volume_up, "Сигнал"),
-                      _controlButton(Icons.ac_unit, "Кондиционер"),
-                      _controlButton(Icons.map, "GPS"),
-                    ],
-                  ),
-
-                  const Spacer(),
-
-                  // Bottom bar (optional)
-                  Center(
-                    child: Text(
-                      "GM Cobalt Connected",
-                      style: TextStyle(color: Colors.greenAccent, fontSize: 14),
-                    ),
-                  ),
-
-                  const SizedBox(height: 20),
-                ],
+                  ],
+                ),
               ),
+              Icon(Icons.arrow_forward_ios, color: Colors.white54, size: 16),
+            ],
+          ),
+          SizedBox(height: 24),
+          _settingsTile(Icons.language, 'Язык интерфейса', 'Русский'),
+          _settingsTile(Icons.color_lens, 'Настройки темы', 'Тема смартфона'),
+          _settingsTile(Icons.credit_card, 'Карты'),
+          _settingsTile(Icons.devices, 'Устройства'),
+          _settingsTile(Icons.security, 'Безопасность'),
+          _settingsTile(Icons.feedback, 'Обратная связь'),
+          _settingsTile(Icons.share, 'Поделиться'),
+          ListTile(
+            leading: Icon(Icons.power_settings_new, color: Colors.red),
+            title: Text('Выход', style: TextStyle(color: Colors.red)),
+            trailing: Icon(
+              Icons.arrow_forward_ios,
+              color: Colors.white54,
+              size: 16,
+            ),
+            onTap: () {},
+          ),
+          SizedBox(height: 16),
+          Center(
+            child: Text(
+              'Публичная оферта',
+              style: TextStyle(color: Colors.blueAccent),
             ),
           ),
+          SizedBox(height: 16),
         ],
       ),
     );
   }
 
-  // Car status widget
-  Widget _carStatus(String label, String value, IconData icon) {
-    return Column(
-      children: [
-        Icon(icon, color: Colors.cyanAccent, size: 28),
-        const SizedBox(height: 6),
-        Text(value, style: TextStyle(color: Colors.white, fontSize: 16)),
-        const SizedBox(height: 2),
-        Text(label, style: TextStyle(color: Colors.grey[500], fontSize: 12)),
-      ],
-    );
-  }
-
-  // Control button widget
-  Widget _controlButton(IconData icon, String label) {
-    return Container(
-      width: 100,
-      height: 80,
-      decoration: BoxDecoration(
-        color: Colors.white10,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white12),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, color: Colors.lightBlueAccent, size: 28),
-          const SizedBox(height: 6),
-          Text(label, style: TextStyle(color: Colors.white70, fontSize: 13)),
-        ],
-      ),
+  Widget _settingsTile(IconData icon, String title, [String? subtitle]) {
+    return ListTile(
+      leading: Icon(icon, color: Colors.white),
+      title: Text(title, style: TextStyle(color: Colors.white)),
+      subtitle:
+          subtitle != null
+              ? Text(subtitle, style: TextStyle(color: Colors.white70))
+              : null,
+      trailing: Icon(Icons.arrow_forward_ios, color: Colors.white54, size: 16),
+      onTap: () {},
     );
   }
 }

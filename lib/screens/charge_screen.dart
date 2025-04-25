@@ -678,7 +678,8 @@ class Message extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: ' 4 колонки свободны', // kolonkalar benzin quygich nasoslar
+                          text:
+                              ' 4 колонки свободны', // kolonkalar benzin quygich nasoslar
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
@@ -692,7 +693,11 @@ class Message extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Image.asset("assets/icons/location_oil.png",width: 30,height: 30,), // Agar kerak bo‘lsa ikonani ham almashtirish mumkin
+                  Image.asset(
+                    "assets/icons/location_oil.png",
+                    width: 30,
+                    height: 30,
+                  ), // Agar kerak bo‘lsa ikonani ham almashtirish mumkin
                   const Text(
                     '1.7 км',
                     style: TextStyle(
@@ -717,7 +722,7 @@ class Message extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'UzAuto АЗС -', // AЗС - Avtozapravka stansiyasi
+                    'PetroOil АЗС -',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -725,7 +730,7 @@ class Message extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Самарканд, Регистан',
+                    'Самарканд, Университет...',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -736,7 +741,7 @@ class Message extends StatelessWidget {
                     text: const TextSpan(
                       children: [
                         TextSpan(
-                          text: '2 /',
+                          text: '3 /',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 12,
@@ -744,7 +749,7 @@ class Message extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: ' 4 колонки свободны', // kolonkalar benzin quygich nasoslar
+                          text: ' 6 колонок свободны',
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
@@ -758,9 +763,13 @@ class Message extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Image.asset("assets/icons/location_oil.png",width: 30,height: 30,), // Agar kerak bo‘lsa ikonani ham almashtirish mumkin
+                  Image.asset(
+                    "assets/icons/location_oil.png",
+                    width: 30,
+                    height: 30,
+                  ),
                   const Text(
-                    '1.7 км',
+                    '2.1 км',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w400,
@@ -782,7 +791,7 @@ class Message extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'UzAuto АЗС -', // AЗС - Avtozapravka stansiyasi
+                    'NeoGas АЗС -',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -790,7 +799,7 @@ class Message extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Самарканд, Регистан',
+                    'Самарканд, Ёшлик тумани',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -801,7 +810,7 @@ class Message extends StatelessWidget {
                     text: const TextSpan(
                       children: [
                         TextSpan(
-                          text: '2 /',
+                          text: '1 /',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 12,
@@ -809,7 +818,7 @@ class Message extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: ' 4 колонки свободны', // kolonkalar benzin quygich nasoslar
+                          text: ' 3 колонки свободны',
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
@@ -823,9 +832,13 @@ class Message extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Image.asset("assets/icons/location_oil.png",width: 30,height: 30,), // Agar kerak bo‘lsa ikonani ham almashtirish mumkin
+                  Image.asset(
+                    "assets/icons/location_oil.png",
+                    width: 30,
+                    height: 30,
+                  ),
                   const Text(
-                    '1.7 км',
+                    '2.8 км',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w400,
@@ -838,72 +851,6 @@ class Message extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 25, right: 5),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'UzAuto АЗС -', // AЗС - Avtozapravka stansiyasi
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: const Color(0xFFEBEBF5).withOpacity(0.60),
-                    ),
-                  ),
-                  Text(
-                    'Самарканд, Регистан',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: const Color(0xFFEBEBF5).withOpacity(0.60),
-                    ),
-                  ),
-                  RichText(
-                    text: const TextSpan(
-                      children: [
-                        TextSpan(
-                          text: '2 /',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        TextSpan(
-                          text: ' 4 колонки свободны', // kolonkalar benzin quygich nasoslar
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  Image.asset("assets/icons/location_oil.png",width: 30,height: 30,), // Agar kerak bo‘lsa ikonani ham almashtirish mumkin
-                  const Text(
-                    '1.7 км',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.grey,
-                      height: 2,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-
       ],
     );
   }

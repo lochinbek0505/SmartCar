@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:smart_car/services/themes/colors.dart';
 
 class CobaltInfoPage extends StatelessWidget {
   const CobaltInfoPage({super.key});
@@ -8,26 +9,14 @@ class CobaltInfoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.backgroundDark,
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            pinned: true,
-            expandedHeight: 250.0,
+            backgroundColor: AppColors.backgroundDark,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text("GM Cobalt"),
-              background: Stack(
-                fit: StackFit.expand,
-                children: [
-                  Image.asset(
-                    'assets/images/img_tesla_grey.png', // o'zing rasm joylashtir
-                    fit: BoxFit.cover,
-                  ),
-                  Container(color: Colors.black.withOpacity(0.4)),
-                ],
-              ),
+              title: Text("GM Cobalt", style: TextStyle(color: Colors.white)),
             ),
-            backgroundColor: Colors.deepPurple.shade900,
           ),
           SliverToBoxAdapter(
             child: Padding(
@@ -35,22 +24,7 @@ class CobaltInfoPage extends StatelessWidget {
               child: Column(
                 children: [
                   // Neon effect title
-                  Text(
-                    'Техническая информация',
-                    style: TextStyle(
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.cyanAccent,
-                      shadows: [
-                        Shadow(
-                          blurRadius: 10.0,
-                          color: Colors.cyanAccent,
-                          offset: Offset(0, 0),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 20),
 
                   // Stat cards
                   Row(
