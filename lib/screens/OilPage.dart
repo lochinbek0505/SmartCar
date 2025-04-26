@@ -17,7 +17,7 @@ class _OilpageState extends State<Oilpage> {
         child: ElevatedButton(
           onPressed: () {
             NotificationService.showSimpleNotification(
-              'Salom! Bu oddiy bildirishnoma.',
+              'Salom! Bu oddiy bildirishnoma.',""
             );
           },
           child: Text("data"),

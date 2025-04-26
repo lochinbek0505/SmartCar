@@ -75,23 +75,23 @@ class _GaragePageState extends State<GaragePage> {
             ),
             GestureDetector(
               onTap: () {
-                _showFuelDialog(context, 'fuel');
+                _showFuelDialog(context, 'oil');
               },
-              child: GestureDetector(
-                onTap: () {
-                  _showFuelDialog(context, 'oil');
-                },
-                child: _buildAddCard(
-                  Icons.add,
-                  'Масло',
-                  'Добавьте информацию, чтобы перед истечением срока получать напоминания',
-                ),
+              child: _buildAddCard(
+                Icons.add,
+                'Масло',
+                'Добавьте информацию, чтобы перед истечением срока получать напоминания',
               ),
             ),
-            _buildAddCard(
-              Icons.add,
-              'Газ',
-              'Добавьте информацию, чтобы перед истечением срока получать напоминания',
+            GestureDetector(
+              onTap: () {
+                _showFuelDialog(context, 'fuel');
+              },
+              child: _buildAddCard(
+                Icons.add,
+                'Газ',
+                'Добавьте информацию, чтобы перед истечением срока получать напоминания',
+              ),
             ),
           ],
         ),
