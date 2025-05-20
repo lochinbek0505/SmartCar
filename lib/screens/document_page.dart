@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../views/components/fuild_dailog.dart';
 
@@ -10,6 +11,31 @@ class GaragePage extends StatefulWidget {
 }
 
 class _GaragePageState extends State<GaragePage> {
+
+  String fuel="";
+  String oil="";
+
+  Future<void> _saveFuel(fuel) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('fuel',fuel);
+
+  }
+  Future<void> _saveOil(oil) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('oil',oil);
+
+  }
+
+  Future<void> _loadData() async {
+    final prefs = await SharedPreferences.getInstance();
+    oil=(await prefs.getString('oil'))??"0";
+    fuel=(await prefs.getString('fuel'))!??"0";
+
+    setState(() {
+
+    });
+
+  }
   void _showFuelDialog(BuildContext context, String state) {
     showDialog(
       context: context,
@@ -20,6 +46,12 @@ class _GaragePageState extends State<GaragePage> {
         );
       },
     );
+  }
+  @override
+  void initState() {
+    super.initState();
+
+    _loadData();
   }
 
   @override
@@ -74,23 +106,26 @@ class _GaragePageState extends State<GaragePage> {
               'Информация о тонировке не найдена',
             ),
             GestureDetector(
-              onTap: () {
+              onTap: () async {
                 _showFuelDialog(context, 'oil');
+                await _loadData();
               },
               child: _buildAddCard(
                 Icons.add,
                 'Масло',
-                'Добавьте информацию, чтобы перед истечением срока получать напоминания',
+                '$oil литр',
               ),
             ),
             GestureDetector(
-              onTap: () {
+              onTap: () async {
                 _showFuelDialog(context, 'fuel');
+                await _loadData();
+
               },
               child: _buildAddCard(
                 Icons.add,
                 'Газ',
-                'Добавьте информацию, чтобы перед истечением срока получать напоминания',
+                '$fuel квадратный метр',
               ),
             ),
           ],

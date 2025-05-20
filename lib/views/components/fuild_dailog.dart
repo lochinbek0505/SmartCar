@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../services/notifacation_service.dart';
 
@@ -15,10 +16,20 @@ class _FuelInputDialogState extends State<FuelInputDialog> {
   final TextEditingController _fuelController = TextEditingController();
   String? _fuelAmount;
   String selectedFuelType = 'fuel'; // Default: 'fuel'
+  Future<void> _saveFuel(fuel) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('fuel',fuel);
 
+  }
+  Future<void> _saveOil(oil) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('oil',oil);
+
+  }
   giveMessage(count) {
     if (selectedFuelType == 'fuel') {
       if (count < 5) {
+        _saveFuel(count.toString());
         NotificationService.showSimpleNotification(
           'Топливо на исходе',
           'Пожалуйста, заправьте топливо',
@@ -29,6 +40,8 @@ class _FuelInputDialogState extends State<FuelInputDialog> {
       // );
     } else {
       if (count > 999) {
+        _saveOil(count.toString());
+
         NotificationService.showSimpleNotification(
           'Время заменить моторное масло',
           'Пожалуйста, замените моторное масло',
